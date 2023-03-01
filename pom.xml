@@ -14,14 +14,17 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring-boot>2.7.5</spring-boot>
+        <spring-boot>2.5.5</spring-boot>
         <huool-all>5.8.12</huool-all>
         <mysql-connector-java>8.0.32</mysql-connector-java>
         <commons-lang3>3.12.0</commons-lang3>
         <guava>31.1-jre</guava>
         <mapstruct>1.4.2.Final</mapstruct>
         <lombok>1.18.24</lombok>
+        <springfox>3.0.0</springfox>
+        <spring-boot-starter-data-redis>3.0.1</spring-boot-starter-data-redis>
     </properties>
+
 
     <!--项目依赖-->
     <dependencies>
@@ -55,6 +58,7 @@
             <artifactId>guava</artifactId>
             <version>${guava}</version>
         </dependency>
+        <!--mapstruct-->
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
@@ -65,12 +69,45 @@
             <artifactId>mapstruct-processor</artifactId>
             <version>${mapstruct}</version>
         </dependency>
+        <!--引入lombok简化开发-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok}</version>
             <scope>provided</scope>
         </dependency>
+        <!--集成swagger3，springboot2.6以上与swagger3不兼容-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+            <version>${springfox}</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.29</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+            <version>${spring-boot}</version>
+        </dependency>
     </dependencies>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
 
 </project>
