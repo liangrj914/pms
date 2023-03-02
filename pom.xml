@@ -23,6 +23,7 @@
         <lombok>1.18.24</lombok>
         <springfox>3.0.0</springfox>
         <spring-boot-starter-data-redis>3.0.1</spring-boot-starter-data-redis>
+        <mapstruct>1.5.0.Final</mapstruct>
     </properties>
 
 
@@ -100,6 +101,22 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
+            <version>${spring-boot}</version>
+        </dependency>
+        <!--mapstruct-->
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>${mapstruct}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-processor</artifactId>
+            <version>${mapstruct}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
             <version>${spring-boot}</version>
         </dependency>
     </dependencies>
