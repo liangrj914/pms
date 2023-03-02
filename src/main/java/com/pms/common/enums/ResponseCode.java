@@ -16,7 +16,12 @@ public enum ResponseCode {
     /**
      * 请求报错
      */
-    FAIL(500, "请求报错");
+    FAIL(500, "请求报错"),
+
+    /**
+     * 参数校验错误
+     */
+    PARAM_EXCEPTION(311, "参数错误");
 
     private final int code;
 
