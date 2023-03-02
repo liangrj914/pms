@@ -1,4 +1,4 @@
-package com.pms.common.advice;
+package com.pms.common.handler;
 
 import com.pms.common.enums.ResponseCode;
 import com.pms.common.model.Response;
